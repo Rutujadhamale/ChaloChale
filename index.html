@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaloChale — Explore India, Your Way</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Chalo<span>Chale</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto align-items-lg-center">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="destination.html">Destination</a>
+            <a class="nav-link" href="packages.html">Packages</a>
+            <a class="nav-link" href="booking.html">Booking</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+            <a href="contact.html" class="btn btn-warning ms-lg-2 mt-2 mt-lg-0 fw-semibold">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero" style="background-image: url('images/explore 1.jpg');">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+
+      <div class="container hero-inner">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-9">
+            <div class="hero-badge hero-fade">
+              <i class="fa-solid fa-plane-departure"></i> Trusted by 50,000+ travellers
+            </div>
+            <h1 class="hero-fade hero-fade-1">
+              Your Dream Vacation<br>
+              Starts <span class="highlight">Right Here</span>
+            </h1>
+            <p class="lead mx-auto mt-3 hero-fade hero-fade-2">
+              Handpicked destinations, comfortable stays and unforgettable experiences —
+              all in one easy booking.
+            </p>
+            <div class="mt-4 hero-fade hero-fade-3">
+              <a href="#packages" class="btn btn-hero me-2 mb-2">
+                <i class="fa-solid fa-magnifying-glass me-1"></i> Explore Packages
+              </a>
+              <a href="destination.html" class="btn btn-ghost mb-2">View Destinations</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Widget -->
+        <div class="row justify-content-center">
+          <div class="col-lg-11">
+            <form class="search-widget" id="searchForm">
+              <div class="row g-3 align-items-end">
+                <div class="col-md-4">
+                  <label for="searchDestination">Where to?</label>
+                  <select class="form-select" id="searchDestination">
+                    <option value="">Select Destination</option>
+                    <option>Goa</option>
+                    <option>Kerala</option>
+                    <option>Jaipur</option>
+                    <option>Agra</option>
+                    <option>Manali</option>
+                    <option>Rajasthan</option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="searchDate">Travel Date</label>
+                  <input type="date" class="form-control" id="searchDate">
+                </div>
+                <div class="col-md-3">
+                  <label for="searchPeople">Travellers</label>
+                  <input type="number" class="form-control" id="searchPeople" placeholder="2" min="1">
+                </div>
+                <div class="col-md-2">
+                  <button type="submit" class="btn btn-search w-100">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="stat-item reveal">
+              <div class="stat-num" data-count="50000" data-suffix="+">0</div>
+              <div class="stat-label">Happy Travellers</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item reveal reveal-delay-1">
+              <div class="stat-num" data-count="200" data-suffix="+">0</div>
+              <div class="stat-label">Destinations</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item reveal reveal-delay-2">
+              <div class="stat-num" data-count="1200" data-suffix="+">0</div>
+              <div class="stat-label">Packages Sold</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item reveal reveal-delay-3">
+              <div class="stat-num" data-count="24" data-suffix="/7">0</div>
+              <div class="stat-label">Customer Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHALOCHALE ================= -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Why Choose ChaloChale?</h2>
+          <p class="section-sub mt-2">We make travel simple, affordable and unforgettable.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h5 class="fw-bold">Easy Booking</h5>
+              <p class="text-muted mb-0">Book travel packages quickly with our simple 3-step booking system.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal reveal-delay-1">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-hotel"></i></div>
+              <h5 class="fw-bold">Best Hotels</h5>
+              <p class="text-muted mb-0">Comfortable, verified hotel stays at prices that won't burn a hole in your pocket.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal reveal-delay-2">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+              <h5 class="fw-bold">24/7 Support</h5>
+              <p class="text-muted mb-0">Real humans, real help — our travel support team is always on call.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal reveal-delay-3">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-tag"></i></div>
+              <h5 class="fw-bold">Best Prices</h5>
+              <p class="text-muted mb-0">Guaranteed lowest fares with price-match promise on all domestic packages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= POPULAR DESTINATIONS ================= -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Popular Destinations</h2>
+          <p class="section-sub mt-2">Where will your next adventure take you?</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4 reveal">
+            <div class="dest-card">
+              <img src="images/tajmahal.jpg" alt="Taj Mahal">
+              <span class="dest-price">from ₹9,999</span>
+              <span class="dest-explore"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              <div class="dest-overlay">
+                <div class="dest-name">Taj Mahal, Agra</div>
+                <p class="dest-desc">Explore Mughal architecture and the marble wonder of the world at sunset.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+            <div class="dest-card">
+              <img src="images/goa.jpg" alt="Goa">
+              <span class="dest-price">from ₹8,499</span>
+              <span class="dest-explore"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              <div class="dest-overlay">
+                <div class="dest-name">Goa</div>
+                <p class="dest-desc">Sun-kissed beaches, vibrant nightlife, water sports and fresh seafood.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+            <div class="dest-card">
+              <img src="images/jaipur.jpg" alt="Jaipur">
+              <span class="dest-price">from ₹7,999</span>
+              <span class="dest-explore"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+              <div class="dest-overlay">
+                <div class="dest-name">Jaipur</div>
+                <p class="dest-desc">Pink-city forts, royal palaces and authentic Rajasthani culture.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4 reveal">
+          <a href="destination.html" class="btn btn-outline-primary fw-semibold px-4">See All Destinations <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED PACKAGES ================= -->
+    <section class="py-5" id="packages">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">Featured Packages</h2>
+          <p class="section-sub mt-2">Handpicked trips loved by our travellers</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="card package-card position-relative">
+              <span class="package-tag">Bestseller</span>
+              <div class="package-banner"><i class="fa-solid fa-umbrella-beach"></i></div>
+              <div class="card-body p-4">
+                <h4 class="card-title fw-bold">Goa Beach Package</h4>
+                <p class="text-muted mb-2"><i class="fa-regular fa-calendar me-1"></i> 5 Days / 4 Nights</p>
+                <p class="text-muted mb-3"><i class="fa-solid fa-users me-1"></i> Beach stay + water sports + sightseeing</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="package-price">₹15,999 <small>₹19,999</small></span>
+                </div>
+                <a href="#" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                  <i class="fa-solid fa-plane me-1"></i> Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal reveal-delay-1">
+            <div class="card package-card position-relative">
+              <span class="package-tag">Trending</span>
+              <div class="package-banner"><i class="fa-solid fa-mountain-sun"></i></div>
+              <div class="card-body p-4">
+                <h4 class="card-title fw-bold">Manali Adventure Package</h4>
+                <p class="text-muted mb-2"><i class="fa-regular fa-calendar me-1"></i> 6 Days / 5 Nights</p>
+                <p class="text-muted mb-3"><i class="fa-solid fa-users me-1"></i> Trekking + snow point + canyon</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="package-price">₹18,499 <small>₹22,499</small></span>
+                </div>
+                <a href="#" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                  <i class="fa-solid fa-plane me-1"></i> Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal reveal-delay-2">
+            <div class="card package-card position-relative">
+              <div class="package-banner"><i class="fa-solid fa-ship"></i></div>
+              <div class="card-body p-4">
+                <h4 class="card-title fw-bold">Kerala Backwater Package</h4>
+                <p class="text-muted mb-2"><i class="fa-regular fa-calendar me-1"></i> 4 Days / 3 Nights</p>
+                <p class="text-muted mb-3"><i class="fa-solid fa-users me-1"></i> Houseboat + ayurveda + beaches</p>
+                <div class="d-flex align-items-center justify-content-between">
+                  <span class="package-price">₹12,999 <small>₹15,999</small></span>
+                </div>
+                <a href="#" class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                  <i class="fa-solid fa-plane me-1"></i> Book Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <h2 class="section-title">What Travellers Say</h2>
+          <p class="section-sub mt-2">Real stories from real journeys</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="testimonial-card">
+              <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>"Booked our Goa trip in under 5 minutes. The package was exactly as promised and the support team helped us throughout."</p>
+              <div class="testimonial-author mt-3">
+                <div class="testimonial-avatar">PR</div>
+                <div>
+                  <div class="fw-bold">Priya Sharma</div>
+                  <small class="text-muted">Goa Package</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-1">
+            <div class="testimonial-card">
+              <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              <p>"The Manali adventure package was incredible — well planned itinerary, great hotels and the best price I found anywhere."</p>
+              <div class="testimonial-author mt-3">
+                <div class="testimonial-avatar">AR</div>
+                <div>
+                  <div class="fw-bold">Amit Rao</div>
+                  <small class="text-muted">Manali Package</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 reveal reveal-delay-2">
+            <div class="testimonial-card">
+              <div class="stars mb-2"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+              <p>"Kerala backwaters were a dream come true. ChaloChale handled everything — houseboat, food, transfers. Highly recommended!"</p>
+              <div class="testimonial-author mt-3">
+                <div class="testimonial-avatar">SK</div>
+                <div>
+                  <div class="fw-bold">Sneha Kulkarni</div>
+                  <small class="text-muted">Kerala Package</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="py-5">
+      <div class="container">
+        <div class="cta-section text-center reveal">
+          <h2 class="fw-bold mb-2">Ready to Start Your Journey?</h2>
+          <p class="mb-4 opacity-75">Book your next trip today and get instant confirmation.</p>
+          <a href="booking.html" class="btn btn-light-custom">Book Your Trip <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5>Chalo<span style="color: var(--primary);">Chale</span></h5>
+            <p class="mb-3">Your trusted travel companion for unforgettable journeys across India and beyond.</p>
+            <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="col-md-2 col-6">
+            <h5>Quick Links</h5>
+            <p><a href="index.html">Home</a></p>
+            <p><a href="destination.html">Destinations</a></p>
+            <p><a href="packages.html">Packages</a></p>
+            <p><a href="booking.html">Booking</a></p>
+          </div>
+          <div class="col-md-2 col-6">
+            <h5>Company</h5>
+            <p><a href="about.html">About Us</a></p>
+            <p><a href="contact.html">Contact</a></p>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Terms</a></p>
+          </div>
+          <div class="col-md-4">
+            <h5>Contact Us</h5>
+            <p><i class="fa-solid fa-location-dot me-2"></i> 123 Travel Street, Mumbai, India</p>
+            <p><i class="fa-solid fa-phone me-2"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope me-2"></i> hello@chalochale.com</p>
+          </div>
+        </div>
+        <hr class="border-secondary my-4">
+        <p class="text-center mb-0">© 2026 ChaloChale Travel App | Made with <i class="fa-solid fa-heart text-danger"></i> for travellers</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- ================= BOOKING MODAL ================= -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4">
+          <div class="modal-header" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff;">
+            <h5 class="modal-title fw-bold"><i class="fa-solid fa-plane-departure me-2"></i>Book Your Trip</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <form id="bookingForm">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-semibold">Full Name</label>
+                  <input type="text" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-semibold">Email</label>
+                  <input type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-semibold">Destination</label>
+                  <select class="form-select" required>
+                    <option value="">Select Destination</option>
+                    <option>Goa</option>
+                    <option>Kerala</option>
+                    <option>Jaipur</option>
+                    <option>Agra</option>
+                    <option>Manali</option>
+                    <option>Rajasthan</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-semibold">Travel Date</label>
+                  <input type="date" class="form-control" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-semibold">Number of People</label>
+                  <input type="number" class="form-control" placeholder="Enter number of people" min="1" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-semibold">Package</label>
+                  <select class="form-select">
+                    <option>Goa Beach Package</option>
+                    <option>Manali Adventure Package</option>
+                    <option>Kerala Backwater Package</option>
+                  </select>
+                </div>
+                <div class="col-12 mb-3">
+                  <label class="form-label fw-semibold">Message</label>
+                  <textarea class="form-control" rows="3" placeholder="Any special request?"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
+                    <i class="fa-solid fa-check me-1"></i> Submit Booking
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
