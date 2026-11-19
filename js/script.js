@@ -1,5 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // ---------- Login / Signup view toggle ----------
+  const loginView = document.getElementById("loginView");
+  const signupView = document.getElementById("signupView");
+  if (loginView && signupView) {
+    const loginBtn = loginView.querySelector(".auth-submit");
+    const signupBtn = signupView.querySelector(".auth-submit");
+    const showView = (view) => {
+      const isSignup = view === "signup";
+      signupView.style.display = isSignup ? "" : "none";
+      loginView.style.display = isSignup ? "none" : "";
+      if (loginBtn) loginBtn.innerHTML = '<i class="fa-solid fa-right-to-bracket me-2"></i>Login';
+      if (signupBtn) signupBtn.innerHTML = '<i class="fa-solid fa-user-plus me-2"></i>Sign Up';
+      document.title = isSignup
+        ? "Sign Up — ChaloChale Travel"
+        : "Login — ChaloChale Travel";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    window.addEventListener("hashchange", () => {
+      showView(location.hash === "#signup" ? "signup" : "login");
+    });
+    showView(location.hash === "#signup" ? "signup" : "login");
+  }
+
   // ---------- Sticky navbar ----------
   const navbar = document.querySelector(".navbar");
   window.addEventListener("scroll", () => {
@@ -81,6 +104,93 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // ---------- Destination filter ----------
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const destCards = document.querySelectorAll(".dest-filter-card");
+  if (filterBtns.length && destCards.length) {
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.dataset.filter;
+        let visible = 0;
+        destCards.forEach((card) => {
+          const show = filter === "all" || card.dataset.category === filter;
+          card.style.display = show ? "" : "none";
+          if (show) visible++;
+        });
+        const noResults = document.querySelector(".no-results");
+        if (noResults) noResults.style.display = visible === 0 ? "block" : "none";
+      });
+    });
+  }
+
+  // ---------- Auth state (navbar) ----------
+  const navGuest = document.getElementById("navGuest");
+  const navUser = document.getElementById("navUser");
+  const navUserName = document.getElementById("navUserName");
+  const logoutBtn = document.getElementById("logoutBtn");
+
+  const getUser = () => {
+    try { return JSON.parse(localStorage.getItem("chalochale_user")); }
+    catch { return null; }
+  };
+  const setUser = (user) => localStorage.setItem("chalochale_user", JSON.stringify(user));
+
+  const user = getUser();
+  if (navGuest && navUser) {
+    if (user) {
+      navGuest.style.display = "none";
+      navUser.style.display = "";
+      if (navUserName) navUserName.textContent = user.name || "User";
+    } else {
+      navUser.style.display = "none";
+    }
+  }
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      localStorage.removeItem("chalochale_user");
+      window.location.href = "index.html";
+    });
+  }
+
+  // ---------- Login / Signup forms ----------
+  const loginForm = document.getElementById("loginForm");
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = loginForm.querySelector('input[type="email"]').value;
+      setUser({ name: email.split("@")[0], email });
+      alert("Welcome back! Logged in successfully.");
+      window.location.href = "index.html";
+    });
+  }
+
+  const signupForm = document.getElementById("signupForm");
+  if (signupForm) {
+    signupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (signupForm.password.value !== signupForm.confirmPassword.value) {
+        alert("Passwords do not match. Please try again.");
+        return;
+      }
+      setUser({ name: signupForm.fullName.value, email: signupForm.email.value });
+      alert("Account created successfully! Welcome to ChaloChale.");
+      window.location.href = "index.html";
+    });
+  }
+
+  // ---------- Contact form ----------
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thanks for reaching out! We'll get back to you within 24 hours.");
+      contactForm.reset();
+    });
+  }
 
   // ---------- Booking form validation feedback ----------
   const bookingForm = document.querySelector("#bookingModal form");

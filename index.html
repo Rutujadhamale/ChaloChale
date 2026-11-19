@@ -13,7 +13,23 @@
     <!-- ================= NAVBAR ================= -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">Chalo<span>Chale</span></a>
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#b3402a"/>
+                <stop offset="1" stop-color="#6b2118"/>
+              </linearGradient>
+            </defs>
+            <rect width="48" height="48" rx="14" fill="url(#logoGrad)"/>
+            <circle cx="38" cy="10" r="3.5" fill="#fde68a"/>
+            <path d="M8 39 Q4 29 15 22" stroke="#ecc9bd" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="0.5 5"/>
+            <g transform="translate(11,11) rotate(-45 12 12) scale(1.05)">
+              <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" fill="#fff"/>
+            </g>
+          </svg>
+          Chalo<span>Chale</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,14 +41,28 @@
             <a class="nav-link" href="booking.html">Booking</a>
             <a class="nav-link" href="about.html">About</a>
             <a class="nav-link" href="contact.html">Contact</a>
-            <a href="contact.html" class="btn btn-warning ms-lg-2 mt-2 mt-lg-0 fw-semibold">Login</a>
+            <span id="navGuest" class="d-contents">
+              <a href="login.html" class="btn btn-warning ms-lg-2 mt-2 mt-lg-0 fw-semibold">Login</a>
+            </span>
+            <span id="navUser" class="d-contents" style="display:none;">
+              <div class="dropdown ms-lg-2 mt-2 mt-lg-0">
+                <button class="btn btn-warning dropdown-toggle fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-circle-user me-1"></i><span id="navUserName">User</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="booking.html"><i class="fa-solid fa-suitcase me-2"></i>My Bookings</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item text-danger" href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket me-2"></i>Logout</a></li>
+                </ul>
+              </div>
+            </span>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- ================= HERO ================= -->
-    <header class="hero" style="background-image: url('images/explore 1.jpg');">
+    <header class="hero" style="background-image: url('images/udaipur.jpg');">
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
 
@@ -227,7 +257,7 @@
           <div class="col-md-4 reveal">
             <div class="card package-card position-relative">
               <span class="package-tag">Bestseller</span>
-              <div class="package-banner"><i class="fa-solid fa-umbrella-beach"></i></div>
+              <div class="package-banner"><img src="images/goa.jpg" alt="Goa Beach Package"></div>
               <div class="card-body p-4">
                 <h4 class="card-title fw-bold">Goa Beach Package</h4>
                 <p class="text-muted mb-2"><i class="fa-regular fa-calendar me-1"></i> 5 Days / 4 Nights</p>
@@ -245,7 +275,7 @@
           <div class="col-md-4 reveal reveal-delay-1">
             <div class="card package-card position-relative">
               <span class="package-tag">Trending</span>
-              <div class="package-banner"><i class="fa-solid fa-mountain-sun"></i></div>
+              <div class="package-banner"><img src="images/manali.jpg" alt="Manali Adventure Package"></div>
               <div class="card-body p-4">
                 <h4 class="card-title fw-bold">Manali Adventure Package</h4>
                 <p class="text-muted mb-2"><i class="fa-regular fa-calendar me-1"></i> 6 Days / 5 Nights</p>
@@ -262,7 +292,7 @@
 
           <div class="col-md-4 reveal reveal-delay-2">
             <div class="card package-card position-relative">
-              <div class="package-banner"><i class="fa-solid fa-ship"></i></div>
+              <div class="package-banner"><img src="images/kerala.jpg" alt="Kerala Backwater Package"></div>
               <div class="card-body p-4">
                 <h4 class="card-title fw-bold">Kerala Backwater Package</h4>
                 <p class="text-muted mb-2"><i class="fa-regular fa-calendar me-1"></i> 4 Days / 3 Nights</p>
@@ -347,7 +377,17 @@
       <div class="container">
         <div class="row g-4">
           <div class="col-md-4">
-            <h5>Chalo<span style="color: var(--primary);">Chale</span></h5>
+            <h5 class="d-flex align-items-center gap-2">
+              <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <rect width="48" height="48" rx="14" fill="#b3402a"/>
+                <circle cx="38" cy="10" r="3.5" fill="#fde68a"/>
+                <path d="M8 39 Q4 29 15 22" stroke="#ecc9bd" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="0.5 5"/>
+                <g transform="translate(11,11) rotate(-45 12 12) scale(1.05)">
+                  <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" fill="#fff"/>
+                </g>
+              </svg>
+              Chalo<span style="color: var(--primary);">Chale</span>
+            </h5>
             <p class="mb-3">Your trusted travel companion for unforgettable journeys across India and beyond.</p>
             <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
@@ -437,7 +477,7 @@
                   <textarea class="form-control" rows="3" placeholder="Any special request?"></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-success w-100 py-2 fw-bold">
+                  <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">
                     <i class="fa-solid fa-check me-1"></i> Submit Booking
                   </button>
                 </div>
